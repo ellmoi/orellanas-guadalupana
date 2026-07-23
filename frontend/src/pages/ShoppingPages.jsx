@@ -227,7 +227,7 @@ export function OrderDetailPage() {
   return (
     <main className="shopping-page">
       <section className="receipt" id="receipt">
-        <img src="/images/logo-setas-la-guadalupana.png" alt="Logo Setas La Guadalupana" />
+        <img src={`${import.meta.env.BASE_URL}images/logo-setas-la-guadalupana.png`} alt="Logo Setas La Guadalupana" />
         <h1>Setas La Guadalupana</h1>
         <h2>Comprobante {order.number}</h2>
         <p>

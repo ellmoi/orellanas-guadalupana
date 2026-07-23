@@ -14,7 +14,7 @@ export function SiteLayout() {
       </a>
       <header className="site-header">
         <Link to="/" className="brand-link">
-          <img src="/images/logo-setas-la-guadalupana.png" alt="Setas La Guadalupana" />
+          <img src={`${import.meta.env.BASE_URL}images/logo-setas-la-guadalupana.png`} alt="Setas La Guadalupana" />
           <span>Setas La Guadalupana</span>
         </Link>
         <nav aria-label="Navegación principal">

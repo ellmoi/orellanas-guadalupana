@@ -46,7 +46,7 @@ export function AdminLogin() {
   return (
     <main className="admin-login">
       <form onSubmit={submit}>
-        <img src="/images/logo-setas-la-guadalupana.png" alt="Setas La Guadalupana" />
+        <img src={`${import.meta.env.BASE_URL}images/logo-setas-la-guadalupana.png`} alt="Setas La Guadalupana" />
         <p>Administracion segura</p>
         <h1>Panel administrativo</h1>
         <label>
@@ -88,7 +88,7 @@ export function AdminPanel() {
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <Link className="admin-brand" to="/admin/dashboard">
-          <img src="/images/logo-setas-la-guadalupana.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}images/logo-setas-la-guadalupana.png`} alt="" />
           <span>
             La Guadalupana<small>Administracion</small>
           </span>

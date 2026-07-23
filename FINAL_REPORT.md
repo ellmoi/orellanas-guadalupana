@@ -47,21 +47,21 @@ Consulta `docs/PENDING_FEATURES.md`.
 
 ## Ejecuciones realizadas
 
-| Control | Resultado |
-| --- | --- |
-| `npm install` | Correcto; dependencias al día |
-| `npm run prisma:generate` | Correcto, Prisma Client 6.19.3 |
-| `npm run migrate` | Correcto, esquema sincronizado |
-| `npm run seed` | Correcto: 4 roles, 7 productos, 8 recetas y 4 pedidos base |
-| `npm run prisma:validate` | Esquema válido |
-| `npm run db:status` | 6 migraciones; base actualizada |
-| ESLint | Correcto |
-| Prettier | Correcto |
-| Frontend tests | 2 aprobadas |
-| Backend tests | 39 aprobadas |
-| Total | 41 aprobadas, 0 fallidas |
-| Build frontend | Correcto |
-| `npm audit --audit-level=high` | 0 vulnerabilidades |
+| Control                        | Resultado                                                  |
+| ------------------------------ | ---------------------------------------------------------- |
+| `npm install`                  | Correcto; dependencias al día                              |
+| `npm run prisma:generate`      | Correcto, Prisma Client 6.19.3                             |
+| `npm run migrate`              | Correcto, esquema sincronizado                             |
+| `npm run seed`                 | Correcto: 4 roles, 7 productos, 8 recetas y 4 pedidos base |
+| `npm run prisma:validate`      | Esquema válido                                             |
+| `npm run db:status`            | 6 migraciones; base actualizada                            |
+| ESLint                         | Correcto                                                   |
+| Prettier                       | Correcto                                                   |
+| Frontend tests                 | 2 aprobadas                                                |
+| Backend tests                  | 39 aprobadas                                               |
+| Total                          | 41 aprobadas, 0 fallidas                                   |
+| Build frontend                 | Correcto                                                   |
+| `npm audit --audit-level=high` | 0 vulnerabilidades                                         |
 
 ## Pruebas de ejecución
 

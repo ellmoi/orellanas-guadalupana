@@ -17,7 +17,7 @@ export function HomePage() {
       <section className="welcome-card" aria-labelledby="welcome-title">
         <img
           className="brand-logo"
-          src="/images/logo-setas-la-guadalupana.png"
+          src={`${import.meta.env.BASE_URL}images/logo-setas-la-guadalupana.png`}
           alt="Logo de Setas La Guadalupana con tres orellanas"
         />
         <p className="eyebrow">

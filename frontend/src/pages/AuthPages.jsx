@@ -254,7 +254,7 @@ function AuthCard({ title, intro, children }) {
   return (
     <main className="auth-page">
       <section className="auth-card">
-        <img src="/images/logo-setas-la-guadalupana.png" alt="Setas La Guadalupana" />
+        <img src={`${import.meta.env.BASE_URL}images/logo-setas-la-guadalupana.png`} alt="Setas La Guadalupana" />
         <h1>{title}</h1>
         <p>{intro}</p>
         {children}
