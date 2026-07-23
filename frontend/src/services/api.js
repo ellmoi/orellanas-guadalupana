@@ -1,4 +1,5 @@
 const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:3000/api').replace(/\/$/, '');
+const DEMO_MODE = import.meta.env.VITE_DEMO_MODE === 'true';
 
 export class ApiError extends Error {
   constructor(message, status, errors = []) {
@@ -10,6 +11,12 @@ export class ApiError extends Error {
 }
 
 export async function apiRequest(path, { method = 'GET', body, token, signal } = {}) {
+  if (DEMO_MODE) {
+    if (signal?.aborted) throw new DOMException('La solicitud fue cancelada.', 'AbortError');
+    const { demoRequest } = await import('./demo-api.js');
+    return demoRequest(path, { method, body, token });
+  }
+
   const response = await fetch(`${API_URL}${path}`, {
     method,
     signal,
