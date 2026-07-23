@@ -1,0 +1,37 @@
+{
+  "name": "@guadalupana/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test",
+    "lint": "eslint .",
+    "prisma:generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "seed": "prisma db seed",
+    "receipt:demo": "node scripts/generate-demo-receipt.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "pdfkit": "^0.17.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "prisma": "^6.19.0",
+    "supertest": "^7.1.4"
+  }
+}

@@ -1,0 +1,262 @@
+.admin-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  background: #edf0ec;
+  color: #243129;
+}
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #10291f;
+  color: #fffdf7;
+  padding: 1rem;
+  overflow: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+}
+.admin-brand img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.admin-brand span,
+.admin-user span {
+  display: grid;
+}
+.admin-brand small,
+.admin-user small {
+  opacity: 0.7;
+}
+.admin-sidebar nav {
+  display: grid;
+  gap: 0.15rem;
+  margin: 1.5rem 0;
+  flex: 1;
+}
+.admin-sidebar nav a,
+.admin-sidebar > button {
+  padding: 0.68rem;
+  border-radius: 0.55rem;
+  color: inherit;
+  text-decoration: none;
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+.admin-sidebar nav a:hover,
+.admin-sidebar nav a.active {
+  background: #214c37;
+}
+.admin-main {
+  min-width: 0;
+  padding: 0 1.5rem 2rem;
+}
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #cbd4cb;
+}
+.admin-header h1 {
+  font:
+    2rem Georgia,
+    serif;
+  margin: 0.15rem 0;
+}
+.admin-user {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+.breadcrumbs a {
+  color: #214c37;
+}
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.admin-stats article {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background: white;
+}
+.admin-stats strong {
+  font-size: 2rem;
+}
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.admin-toolbar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+}
+.admin-toolbar input {
+  border: 0;
+  outline: 0;
+}
+.admin-toolbar button,
+.admin-modal button,
+.admin-sidebar > button {
+  cursor: pointer;
+}
+.admin-table-wrap {
+  overflow: auto;
+  background: white;
+  border-radius: 0.8rem;
+}
+.admin-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-table-wrap th,
+.admin-table-wrap td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #e1e6e1;
+}
+.admin-empty,
+.admin-pagination {
+  padding: 1rem;
+}
+.admin-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+.admin-notice {
+  padding: 0.8rem;
+  background: #efe3c5;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #0008;
+  z-index: 10;
+}
+.admin-modal {
+  display: grid;
+  gap: 1rem;
+  width: min(92vw, 500px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: white;
+}
+.admin-modal label {
+  display: grid;
+  gap: 0.3rem;
+}
+.admin-modal input,
+.admin-modal textarea {
+  padding: 0.7rem;
+}
+.admin-modal > div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+.admin-skeleton {
+  display: grid;
+  gap: 1rem;
+}
+.admin-skeleton i {
+  height: 5rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(90deg, #dfe4df, #fff, #dfe4df);
+  background-size: 200%;
+  animation: pulse 1.2s infinite;
+}
+.admin-menu {
+  display: none;
+}
+.admin-login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #10291f;
+}
+.admin-login form {
+  width: min(92%, 400px);
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #fffdf7;
+}
+.admin-login img {
+  width: 80px;
+  border-radius: 50%;
+  justify-self: center;
+}
+.admin-login label {
+  display: grid;
+  gap: 0.3rem;
+}
+.admin-login input,
+.admin-login button {
+  padding: 0.75rem;
+}
+@media (max-width: 850px) {
+  .admin-shell {
+    display: block;
+  }
+  .admin-sidebar {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    width: 280px;
+  }
+  .admin-sidebar.open {
+    display: flex;
+  }
+  .admin-menu {
+    display: block;
+  }
+  .admin-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .admin-main {
+    padding: 0 0.8rem;
+  }
+  .admin-user span {
+    display: none;
+  }
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+  .admin-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

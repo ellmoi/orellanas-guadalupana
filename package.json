@@ -1,0 +1,35 @@
+{
+  "name": "setas-la-guadalupana",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monorepositorio de la plataforma web de Setas La Guadalupana",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "concurrently -n frontend,backend -c green,blue \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "build": "npm run build --workspace frontend",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "prettier --write .",
+    "check:format": "prettier --check .",
+    "check": "npm run lint && npm run check:format && npm test && npm run build",
+    "prisma:validate": "npm exec prisma validate --workspace backend",
+    "prisma:generate": "npm run prisma:generate --workspace backend",
+    "db:status": "npm exec prisma migrate status --workspace backend",
+    "migrate": "npm run migrate --workspace backend",
+    "seed": "npm run seed --workspace backend",
+    "receipt:demo": "npm run receipt:demo --workspace backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prettier": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

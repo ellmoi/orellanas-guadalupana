@@ -1,0 +1,193 @@
+.client-area {
+  min-height: calc(100vh - 4.5rem);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: #f4efdf;
+}
+.account-sidebar {
+  padding: 2rem 1rem;
+  background: #10291f;
+  color: #fffdf7;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.account-sidebar > div {
+  display: grid;
+  gap: 0.25rem;
+}
+.account-sidebar small {
+  opacity: 0.75;
+}
+.account-sidebar nav {
+  display: grid;
+  gap: 0.3rem;
+}
+.account-sidebar a,
+.account-sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem;
+  border-radius: 0.65rem;
+  color: inherit;
+  text-decoration: none;
+}
+.account-sidebar a.active,
+.account-sidebar a:hover {
+  background: #214c37;
+}
+.account-content {
+  width: min(100%, 1000px);
+  padding: clamp(1.2rem, 4vw, 3rem);
+}
+.account-title h1 {
+  margin: 0.2rem 0;
+  font:
+    clamp(2rem, 5vw, 3.2rem) / 1.1 Georgia,
+    serif;
+  color: #214c37;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.stat,
+.account-panel,
+.card-list > * {
+  padding: 1rem;
+  border: 1px solid #d8c49b;
+  border-radius: 1rem;
+  background: #fffdf7;
+}
+.stat {
+  display: grid;
+  gap: 0.25rem;
+}
+.stat strong {
+  font-size: 2rem;
+  color: #214c37;
+}
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+.quick-links a {
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  background: #214c37;
+  color: white;
+  text-decoration: none;
+}
+.card-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1rem 0 2rem;
+}
+.card-list > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+.account-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background: #fffdf7;
+}
+.account-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+.account-form input,
+.account-form select,
+.account-form textarea {
+  width: 100%;
+  padding: 0.72rem;
+  border: 1px solid #a99d82;
+  border-radius: 0.55rem;
+}
+.account-form .full,
+.account-form button {
+  grid-column: 1/-1;
+}
+.account-form.compact {
+  margin-top: 1rem;
+}
+.check {
+  display: flex !important;
+  align-items: center;
+}
+.check input {
+  width: auto;
+}
+.account-message {
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  background: #dfeede;
+}
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.skeleton-grid i {
+  height: 8rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #e6dcc5, #fffdf7, #e6dcc5);
+  background-size: 200%;
+  animation: pulse 1.2s infinite;
+}
+.account-menu-button {
+  display: none;
+}
+@keyframes pulse {
+  to {
+    background-position: -200%;
+  }
+}
+@media (max-width: 800px) {
+  .client-area {
+    display: block;
+  }
+  .account-menu-button {
+    display: block;
+    margin: 1rem;
+    padding: 0.7rem;
+  }
+  .account-sidebar {
+    display: none;
+  }
+  .account-sidebar.open {
+    display: flex;
+  }
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .account-form {
+    grid-template-columns: 1fr;
+  }
+  .account-form button {
+    grid-column: auto;
+  }
+}
+@media (max-width: 460px) {
+  .stat-grid,
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-list > * {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

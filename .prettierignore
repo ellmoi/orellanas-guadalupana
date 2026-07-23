@@ -1,0 +1,10 @@
+node_modules
+frontend/dist
+coverage
+logs
+output
+tmp
+.npm-cache
+backend/prisma/dev.db
+backend/uploads
+package-lock.json
